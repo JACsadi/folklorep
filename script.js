@@ -1,4 +1,5 @@
-const myLink = "folklore.json";
+const myLink =
+  "https://raw.githubusercontent.com/JACsadi/folklorep/main/folklore.json";
 let song = [];
 fetch(myLink)
   .then((a) => a.json())
