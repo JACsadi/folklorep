@@ -1,0 +1,69 @@
+body {
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/595/269/desktop-wallpaper-news-conference-taylor-swift-folklore-59-taylor-swift-folklore-on-afari-taylor-swift-and-taylor-swift-backgrounds-for-your-computer.jpg");
+  display: grid;
+  place-items: center; /* Center items horizontally */
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover; /* Use 'cover' to fill the screen */
+  padding-bottom: 20vh;
+}
+.inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  width: auto;
+  padding: 10px;
+}
+
+.sea {
+  width: 100%;
+  min-height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+a {
+  color: #0f0f0f; /* Adjust the color as needed */
+  text-decoration: none; /* Remove underline, adjust as needed */
+  font-size: 1.2rem;
+}
+a:hover {
+  color: rgb(255, 0, 0);
+  font-size: 1.5rem;
+}
+.result {
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  height: 80vh;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  overflow: auto;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+.list {
+  margin-bottom: 15px;
+  border: 5px outset rgb(35, 3, 3);
+  display: flex;
+  flex-direction: column;
+}
+.lyr {
+  display: none;
+  opacity: 1;
+  color: black;
+  font-size: 20px;
+}
+.name:hover {
+  font-size: 30px;
+}
+br:hover {
+  font-size: 24px;
+}
+.alu {
+  background-color: rgb(0, 0, 0);
+  color: rgba(148, 134, 174, 0.265);
+  font-size: 25px;
+}
