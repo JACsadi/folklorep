@@ -7,7 +7,9 @@ fetch(myLink)
   });
 function matchin(tex, sss) {
   const regex = RegExp(tex, "gi");
-  return sss.filter((a) => a.lyrics.match(regex) || a.name.match(regex));
+  return sss.filter(
+    (a) => a.lyrics.split("<br>").join("").match(regex) || a.name.match(regex)
+  );
 }
 function dropdown(a) {
   const con = document.querySelector(`.${a}`);
@@ -17,10 +19,12 @@ function display() {
   const a = matchin(this.value, song);
   const regex = RegExp(this.value, "gi");
   const html = a.map((a) => {
+    const mat = a.lyrics.match(regex);
     return `<li class="list">
     <span class="name" onclick = "dropdown('${a.name}')">${a.name
       .split("_")
       .join(" ")}</span>
+      <span class="count">${mat ? mat.length : 1} matches</span>
     <span class="lyr ${a.name}">${a.lyrics.replace(
       regex,
       `<b class="alu">${this.value}</b>`
