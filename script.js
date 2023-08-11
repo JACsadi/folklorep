@@ -1,6 +1,12 @@
 const myLink =
   "https://raw.githubusercontent.com/JACsadi/folklorep/main/folklore.json";
 let song = [];
+let bimage = [
+  "https://e1.pxfuel.com/desktop-wallpaper/595/269/desktop-wallpaper-news-conference-taylor-swift-folklore-59-taylor-swift-folklore-on-afari-taylor-swift-and-taylor-swift-backgrounds-for-your-computer.jpg",
+  "https://i.pinimg.com/originals/ef/53/16/ef53169a9822d1618d4ce77ff9363a3b.jpg",
+  "https://w0.peakpx.com/wallpaper/345/641/HD-wallpaper-taylor-swift-folklore.jpg",
+  "https://w0.peakpx.com/wallpaper/668/220/HD-wallpaper-taylor-folklore-singer-taylor-swift.jpg",
+];
 fetch(myLink)
   .then((a) => a.json())
   .then((a) => {
@@ -43,6 +49,23 @@ function display() {
   });
   results.innerHTML = html.join("");
 }
+function ph() {
+  let str = "";
+  do {
+    str =
+      song[Math.floor(Math.random() * 10000) % song.length].lyrics.split(
+        "<br>"
+      )[Math.floor(Math.random() * 1000) % 20];
+  } while (str.length > 35);
+  inputs.placeholder = str;
+}
+let i = 0;
+function bim() {
+  document.body.style.backgroundImage = `url(${bimage[i % 4]})`;
+  i++;
+}
 const inputs = document.querySelector(".sea");
 const results = document.querySelector(".result");
 inputs.addEventListener("keyup", display);
+setInterval(ph, 5000);
+setInterval(bim, 5000);
