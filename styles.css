@@ -1,12 +1,12 @@
 body {
   background-image: url("https://e1.pxfuel.com/desktop-wallpaper/595/269/desktop-wallpaper-news-conference-taylor-swift-folklore-59-taylor-swift-folklore-on-afari-taylor-swift-and-taylor-swift-backgrounds-for-your-computer.jpg");
   display: grid;
-  place-items: center; /* Center items horizontally */
+  place-items: center;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover; /* Use 'cover' to fill the screen */
-  padding-bottom: 20vh;
+  background-size: cover;
+  padding-bottom: 5vh;
 }
 .inp {
   display: flex;
@@ -18,8 +18,8 @@ body {
 }
 
 .sea {
-  width: 100%;
-  min-height: 30px;
+  width: 109%;
+  min-height: 35px;
   padding: 5px;
   border: 1px solid rgba(158, 144, 144, 0.9);
   border-radius: 4px;
