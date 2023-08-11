@@ -59,12 +59,15 @@ function ph() {
   } while (str.length > 35);
   inputs.placeholder = str;
 }
-let i = 0;
+let i = 1;
 function bim() {
   document.body.style.backgroundImage = `url(${bimage[i % 4]})`;
-  if (i % 4 == 2)
-    document.querySelector(".lyr").style.color = `rgba(148, 134, 174, 0.9)`;
-  else document.querySelector(".lyr").style.color = `black`;
+  console.log(`url(${bimage[i % 4]})`);
+  if (document.querySelector(".lyr") != null) {
+    if (i % 4 == 2)
+      document.querySelector(".lyr").style.color = `rgba(148, 134, 174, 0.9)`;
+    else document.querySelector(".lyr").style.color = `black`;
+  }
   i++;
 }
 const inputs = document.querySelector(".sea");
