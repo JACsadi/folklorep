@@ -7,9 +7,15 @@ fetch(myLink)
     song.push(...a);
   });
 function matchin(tex, sss) {
-  const regex = RegExp(tex, "gi");
+  const regex = RegExp(tex.split(/[,\s.'"]/).join(""), "gi");
   return sss.filter(
-    (a) => a.lyrics.split("<br>").join("").match(regex) || a.name.match(regex)
+    (a) =>
+      a.lyrics
+        .split("<br>")
+        .join("")
+        .split(/[,\s.'"]/)
+        .join("")
+        .match(regex) || a.name.match(regex)
   );
 }
 function dropdown(a) {
